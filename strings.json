@@ -1,0 +1,29 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "SolaX Cloud Configuration",
+        "description": "Enter the Client ID and Client Secret created in the SolaX Developer Platform. The Client Secret is displayed as a password field and is stored in this Home Assistant configuration entry.",
+        "data": {
+          "client_id": "SolaX Developer Client ID",
+          "client_secret": "SolaX Developer Client Secret",
+          "api_region": "SolaX API Region",
+          "inverter_sn": "Inverter Serial Number (e.g., SL123456789)"
+        },
+        "data_description": {
+          "client_id": "Generated when you create an application in the SolaX Developer Platform",
+          "client_secret": "Keep this value private; it is used to obtain an API access token",
+          "api_region": "Choose the API region shown under My Account in the SolaX Developer Portal",
+          "inverter_sn": "Serial number found on your inverter or in SolaXCloud app"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "SolaX Cloud rejected the Client ID or Client Secret",
+      "cannot_connect": "Could not connect to SolaX Cloud"
+    },
+    "abort": {
+      "already_configured": "SolaX Cloud integration is already configured"
+    }
+  }
+}

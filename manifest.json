@@ -1,0 +1,10 @@
+{
+  "domain": "solax_cloud",
+  "name": "SolaX Cloud",
+  "codeowners": ["@user"],
+  "config_flow": true,
+  "documentation": "https://github.com/Tipasha/solax-cloud-ha",
+  "issue_tracker": "https://github.com/Tipasha/solax-cloud-ha/issues",
+  "version": "1.0.0",
+  "homeassistant": "2024.1.0"
+}

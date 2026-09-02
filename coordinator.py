@@ -165,7 +165,7 @@ class SolaXCloudCoordinator(DataUpdateCoordinator):
                 max(-_number(record.get("chargeDischargePower")), 0) for record in records
             ),
             "totalBatteryCharged": sum(
-                _number(record.get("totalDevicCharge")) for record in records
+                _number(record.get("totalDeviceCharge")) for record in records
             ),
             "totalBatteryDischarged": sum(
                 _number(record.get("totalDeviceDischarge")) for record in records

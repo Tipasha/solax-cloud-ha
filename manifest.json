@@ -1,7 +1,7 @@
 {
   "domain": "solax_cloud",
   "name": "SolaX Cloud",
-  "codeowners": ["@user"],
+  "codeowners": ["@Tipasha"],
   "config_flow": true,
   "documentation": "https://github.com/Tipasha/solax-cloud-ha",
   "issue_tracker": "https://github.com/Tipasha/solax-cloud-ha/issues",

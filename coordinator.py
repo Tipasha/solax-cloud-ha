@@ -146,8 +146,15 @@ class SolaXCloudCoordinator(DataUpdateCoordinator):
         except aiohttp.ClientError as err:
             raise UpdateFailed(f"Connection error: {err}") from err
 
-        if response.status != 200 or data.get("code") != 10000:
-            raise UpdateFailed(f"Battery data request failed: {response.status}")
+        if response.status != 200:
+            raise UpdateFailed(f"Battery data request failed: HTTP {response.status}")
+        if data.get("code") != 10000:
+            _LOGGER.warning(
+                "SolaX Cloud battery data unavailable: API code %s, message: %s",
+                data.get("code"),
+                data.get("message") or data.get("msg") or "unknown error",
+            )
+            return {}
 
         records = data.get("result", [])
         if not records:

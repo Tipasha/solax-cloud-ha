@@ -43,13 +43,7 @@ A custom Home Assistant integration for monitoring your SolaX inverter via the S
 | **Client Secret** | Generated with the Client ID; displayed as a password field | ••••••• |
 | **API Region** | The API region listed under My Account in the SolaX Developer Portal | Global |
 | **Inverter Serial Number** | Found on your inverter or SolaXCloud app | SL123456789 |
-## Updates
-
-The SolaX Cloud API returns new data for this inverter about every five
-minutes. The integration polls every five minutes to match that cadence. Each
-cycle makes one inverter request and one battery request.
-
-### Security
+## Security
 - The Client Secret is masked while entered in the Home Assistant UI
 - API tokens are **never logged**
 - Credentials are only sent over **HTTPS** to SolaX Cloud
